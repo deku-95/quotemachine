@@ -1,5 +1,8 @@
 import * as React from "react";
-
+const script = document.createElement("script");
+script.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+script.async = true;
+document.body.appendChild(script);
 const url =
   "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
@@ -19,12 +22,6 @@ class App extends React.Component {
           quote: data.quotes[Math.floor(Math.random() * data.quotes.length)],
         });
       });
-
-    const script = document.createElement("script");
-    script.src =
-      "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
-    script.async = true;
-    document.body.appendChild(script);
   }
 
   render() {
@@ -43,23 +40,24 @@ class App extends React.Component {
             <div id="quote-box">
               <p id="text">"{this.state.quote.quote}"</p>
               <p id="author">-{this.state.quote.author}</p>
+              
+              <button
+                id="new-quote"
+                className="pure-button"
+                onClick={() => this.componentDidMount()}
+              >
+                New Quote
+              </button>
+              <a
+                id="tweet-quote"
+                className="pure-button"
+                href={tweet}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tweet this quote
+              </a>
             </div>
-            <button
-              id="new-quote"
-              className="pure-button"
-              onClick={() => this.componentDidMount()}
-            >
-              New Quote
-            </button>
-            <a
-              id="tweet-quote"
-              className="pure-button"
-              href={tweet}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tweet this quote
-            </a>
           </div>
         </div>
       </div>
