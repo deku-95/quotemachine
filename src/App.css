@@ -1,0 +1,29 @@
+body {
+  background: #fafafa;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+#quote {
+  /* create a card look for the quotes# */
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+  width: 550px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#author {
+  color: rgba(95, 89, 89, 0.808);
+  font-size: 15px;
+}

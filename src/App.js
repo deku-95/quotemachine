@@ -24,9 +24,21 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.quote.quote}</h1>
-        <h2>{this.state.quote.author}</h2>
-        <button onClick={() => this.componentDidMount()}>New Quote</button>
+        <div class="pure-g center">
+          <div class="pure-u-1-1">
+            <h1 class="center">Random Quote Machine</h1>
+            <div id="quote">
+              <p id="quoteText">"{this.state.quote.quote}"</p>
+              <p id="author">{this.state.quote.author}</p>
+            </div>
+            <button
+              class="pure-button"
+              onClick={() => this.componentDidMount()}
+            >
+              New Quote
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
