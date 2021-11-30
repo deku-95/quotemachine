@@ -21,9 +21,17 @@ body {
   width: 550px;
   margin-top: 50px;
   margin-bottom: 50px;
+  position: relative;
 }
 
 #author {
   color: rgba(95, 89, 89, 0.808);
-  font-size: 15px;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+#quoteText {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000;
 }

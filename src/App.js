@@ -29,7 +29,7 @@ class App extends React.Component {
             <h1 class="center">Random Quote Machine</h1>
             <div id="quote">
               <p id="quoteText">"{this.state.quote.quote}"</p>
-              <p id="author">{this.state.quote.author}</p>
+              <p id="author">-{this.state.quote.author}</p>
             </div>
             <button
               class="pure-button"
